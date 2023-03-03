@@ -7,6 +7,13 @@
 }
 @font-face {
   font-family: "Montserrat";
+  src: url("Montserrat-Regular.eot");
+  src: url("Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("Montserrat-Regular.woff2") format("woff2"), url("Montserrat-Regular.woff") format("woff"), url("Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
   src: url("font/Montserrat-Medium.eot");
   src: url("font/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("font/Montserrat-Medium.woff2") format("woff2"), url("font/Montserrat-Medium.woff") format("woff"), url("font/Montserrat-Medium.ttf") format("truetype");
   font-weight: 500;
@@ -53,6 +60,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px 20px;
+}
+
+.header_logo img {
+  max-width: 135.35px;
 }
 
 .nav-list {
@@ -89,7 +101,7 @@ body {
 .header-contact_item {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   color: inherit;
   line-height: 12px;
   font-size: 12px;
@@ -102,6 +114,67 @@ body {
   margin-left: 10px;
 }
 
+.header_button {
+  width: 33px;
+  height: 33px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid #000;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  display: none;
+  overflow: hidden;
+}
+.header_button:before {
+  transform: translateY(-8px);
+}
+.header_button:after {
+  transform: translateY(8px);
+}
+.header_button:after, .header_button:before {
+  transform-origin: center;
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: calc(100% - 10px);
+}
+.header_button span, .header_button:after, .header_button:before {
+  transition: opacity 0.123s ease-in, transform 0.123s ease-in;
+  display: block;
+  height: 3.2px;
+  border-radius: 8px;
+  background-color: #484848;
+}
+.header_button span {
+  width: 100%;
+}
+
+.header_button__active::before {
+  transform: translate(0) rotate(45deg);
+}
+.header_button__active span {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+.header_button__active::after {
+  transform: translate(0) rotate(-45deg);
+}
+
 .main {
   flex-grow: 1;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    position: relative;
+  }
+  .header-nav {
+    position: absolute;
+    top: 100%;
+  }
+  .header_button {
+    display: inline-flex;
+  }
 }/*# sourceMappingURL=index.css.map */
