@@ -11,11 +11,11 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('Montserrat-Regular.eot');
-    src: url('Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
-        url('Montserrat-Regular.woff2') format('woff2'),
-        url('Montserrat-Regular.woff') format('woff'),
-        url('Montserrat-Regular.ttf') format('truetype');
+    src: url('font/Montserrat-Regular.eot');
+    src: url('font/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/Montserrat-Regular.woff2') format('woff2'),
+        url('font/Montserrat-Regular.woff') format('woff'),
+        url('font/Montserrat-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
@@ -98,7 +98,9 @@ body {
     gap: 24px
 }
 
-.nav-list_item {}
+.nav-list_item {
+    transition: margin-top .2s ease-out;
+}
 
 .nav-list_item_link {
     color: inherit;
@@ -145,6 +147,7 @@ body {
 }
 
 .header_button {
+    order: 1;
     width: 33px;
     height: 33px;
     border-radius: 5px;
@@ -157,15 +160,16 @@ body {
     display: none;
     overflow: hidden;
 
-    &:before{
+    &:before {
         transform: translateY(-8px);
     }
 
-    &:after{
+    &:after {
         transform: translateY(8px);
     }
 
-    &:after, &:before {
+    &:after,
+    &:before {
         transform-origin: center;
         content: '';
         position: absolute;
@@ -174,7 +178,8 @@ body {
     }
 
     span,
-    &:after, &:before {
+    &:after,
+    &:before {
         transition: opacity .123s ease-in, transform .123s ease-in;
         display: block;
         height: 3.2px;
@@ -182,20 +187,22 @@ body {
         background-color: #484848;
     }
 
-    span{
+    span {
         width: 100%;
     }
 }
 
 .header_button__active {
-    &::before{
+    &::before {
         transform: translate(0) rotate(45deg)
     }
-    span{
+
+    span {
         transform: translateX(-10px);
         opacity: 0;
     }
-    &::after{
+
+    &::after {
         transform: translate(0) rotate(-45deg)
     }
 }
@@ -213,11 +220,69 @@ body {
     }
 
     .header-nav {
+        overflow: hidden;
         position: absolute;
-        top: 100%
+        width: 100%;
+        left: 0;
+        top: 100%;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0
+    }
+
+    .nav-list_item {
+        margin-top: -30%;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #E5E5E5;
+        }
+    }
+
+    .nav-list_item_link {
+        padding: 10px 20px;
+        display: block;
+        transition: color .123s ease-in, background-color .123s ease-in;
+
+        &:hover {
+            color: #fff;
+            background-color: #8C8C8C;
+
+        }
     }
 
     .header_button {
         display: inline-flex;
+    }
+
+    .header-nav__active .nav-list_item {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .header_logo img{
+        max-width: 88px;
+    }
+
+    .header-contact_number{
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .header-contact_list{
+        display: inline-block;
+    }
+
+    .header-contact_item:not(.header-contact_item__whatsapp){
+        display: none;
+        margin: 0;
+    }
+
+    .header-contact_item__whatsapp{
+        font-size: 0;
+        width: 14px;
+        vertical-align: middle;
     }
 }

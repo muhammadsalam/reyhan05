@@ -51,7 +51,7 @@
                     <a class="header-contact_number" href="tel:+79882919562">8 (988) 291-95-62</a>
                     <div class="header-contact_list">
                         <a class="header-contact_item" href="#"><img src="img/icons/phone.png" alt=">"> Позвонить</a>
-                        <a class="header-contact_item" href="#"><img src="img/icons/whatsapp.png" alt=">"> Whatsapp</a>
+                        <a class="header-contact_item header-contact_item__whatsapp" href="#"><img src="img/icons/whatsapp.png" alt=">"> Whatsapp</a>
                         <a class="header-contact_item" href="#"><img src="img/icons/insta.png" alt=">"> Instagram</a>
                     </div>
                 </div>
@@ -67,6 +67,16 @@
             sd
         </footer>
     </div>
+
+    <script>
+        const mobileHeaderButton = document.querySelector('.header_button');
+        const headerNav = document.querySelector('.header-nav');
+
+        mobileHeaderButton.addEventListener('click', (e) => {
+            e.target.classList.toggle('header_button__active');
+            headerNav.classList.toggle('header-nav__active')
+        })
+    </script>
 </body>
 
 </html>
