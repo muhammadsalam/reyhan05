@@ -1,225 +1,292 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
 
     <title>Reyhan05 - рассрочка по исламу</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="content">
-        <header class="header">
-            <div class="header_inner container">
-                <a href="/" class="header_logo logo">
-                    <img src="img/logo-green.svg" alt="Рейхан">
+      <header class="header">
+        <div class="header_inner container">
+          <a href="/" class="header_logo logo">
+            <img src="img/logo-green.svg" alt="Рейхан" />
+          </a>
+          <nav class="nav header-nav">
+            <ul class="nav-list">
+              <li class="nav-list_item">
+                <a class="nav-list_item_link" href="/"> Главная </a>
+              </li>
+              <li class="nav-list_item">
+                <a class="nav-list_item_link" href="/#calc"> Калькулятор </a>
+              </li>
+              <li class="nav-list_item">
+                <a class="nav-list_item_link" href="/#poc"> Как купить </a>
+              </li>
+              <li class="nav-list_item">
+                <a class="nav-list_item_link" href="/#ysl"> Как мы работаем </a>
+              </li>
+              <li class="nav-list_item">
+                <a class="nav-list_item_link" href="/#rew"> Отзывы </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-contact">
+            <a class="header-contact_number" href="tel:+79882919562"
+              >8 (988) 291-95-62</a
+            >
+            <div class="header-contact_list">
+              <a class="header-contact_item" href="#"
+                ><img src="img/icons/phone.png" alt=">" /> Позвонить</a
+              >
+              <a
+                class="header-contact_item header-contact_item__whatsapp"
+                href="#"
+                ><img src="img/icons/whatsapp.png" alt=">" /> Whatsapp</a
+              >
+              <a class="header-contact_item" href="#"
+                ><img src="img/icons/insta.png" alt=">" /> Instagram</a
+              >
+            </div>
+          </div>
+          <button class="header_button">
+            <span></span>
+          </button>
+        </div>
+      </header>
+      <main class="main main__center">
+        <form action="#" onsubmit="event.preventDefault()" class="auth-form">
+          <h2 class="auth-form_title">Введите номер телефона</h2>
+          <div class="auth-form_block">
+            <label for="auth-form_input" class="auth-form_plus">+</label>
+            <input
+              id="auth-form_input"
+              class="auth-form_input"
+              placeholder="79xxxxxxxxx"
+              type="text"
+              pattern="^[0-9]*$"
+            />
+          </div>
+          <button class="auth-form_button">Получить sms с кодом</button>
+        </form>
+      </main>
+      <footer class="footer">
+        <div class="modal modal__agree">
+          <div class="modal_background"></div>
+          <div class="modal-inner">
+            <button class="modal-inner_close">&#10006;</button>
+            <ul class="modal-list">
+              <li class="modal-list_item">
+                Я даю ИП Кафланов Кафлан Алимурадович ИНН 051200880525 ОГРНИП
+                320057100002283, место нахождения: 367000, г. Махачкала, ул
+                Коркмасова, д.29 согласие на обработку (совершение любых
+                действий с использованием средств автоматизации или без, в том
+                числе на сбор, запись, систематизацию, накопление, хранение,
+                уточнение, извлечение, использование, передачу, обезличивание,
+                блокирование, удаление, уничтожение) моих персональных данных,
+                указанных в онлайн-заявке на покупку товара в целях принятия ИП
+                Кафланов Кафлан Алимурадович решения о продаже товара в
+                рассрочку, заключаемого между мной и ИП Кафланов Кафлан
+                Алимурадович медович, а также в целях продвижения на рынке
+                товаров и/ или услуг ИП Кафланов Кафлан Алимурадович и/ или
+                третьих лиц
+              </li>
+              <li class="modal-list_item">
+                Я согласен, что ИП Кафланов Кафлан Алимурадович вправе поручить
+                обработку моих персональных данных третьим лицам.
+              </li>
+              <li class="modal-list_item">
+                Я предоставляю ИП Кафланов Кафлан Алимурадович право проверить
+                все данные, которые я сообщил ИП Кафланов Кафлан Алимурадович в
+                онлайн-заявке на покупку товара, путем осуществления
+                сотрудниками ИП Кафланов Кафлан Алимурадович опросов по
+                телефонам, указанным в онлайн-заявке на покупку товара, а также
+                иными способами, не противоречащими законодательству Российской
+                Федерации. Мое согласие действует в течение 10 лет, с даты
+                подтверждения онлайн-заявки на покупку товара
+              </li>
+              <li class="modal-list_item">
+                Я предоставляю ИП Кафланов Кафлан Алимурадович право направлять
+                мне информацию, включая информацию рекламного характера, об
+                услугах ИИП Кафланов Кафлан Алимурадович и/или третьих лиц по
+                всем известным ИП Кафланов Кафлан Алимурадович адресам и
+                контактам, в том числе посредством телефонной коммуникации/
+                направления смс сообщений, сообщений по социальным сетям и любым
+                мессенджерам в том числе WhatsApp, Telegram по указанному мной
+                номеру мобильного телефона, а также посредством направления
+                сообщений по указанному мной адресу электронной почты.
+              </li>
+              <li class="modal-list_item">
+                Я уведомлен, что могу отозвать свое согласие на обработку
+                персональных данных, представив в ИП Кафланов Кафлан
+                Алимурадович заявление в письменной форме.
+              </li>
+              <li class="modal-list_item">
+                Я подтверждаю, что указанная в онлайн-заявке на покупку товара
+                информация является достоверной, а размещенные персональные
+                данные принадлежат мне. Я понимаю, что в случае предоставления
+                заведомо ложных и (или) недостоверных сведений с целью
+                приобретения товаров в рассрочку я буду нести ответственность в
+                соответствии с законодательством Российской Федерации.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container footer_inner">
+          <div class="footer_logo logo">
+            <a href="/">
+              <img src="img/logo-white.svg" alt="Рейхан" />
+            </a>
+            <div>
+              <img src="img/icons/instagram__white.png" alt="instagram" />
+              <img src="img/icons/whatsapp__white.png" alt="whatsapp" />
+            </div>
+          </div>
+          <div class="footer_right">
+            <button class="footer_button">
+              <span></span>
+            </button>
+            <nav class="nav footer_nav">
+              <ul class="nav-list nav-list__footer">
+                <li class="nav-list_item nav-list_item__footer">
+                  <a
+                    class="nav-list_item_link nav-list_item_link__footer"
+                    href="/"
+                  >
+                    Главная
+                  </a>
+                </li>
+                <li class="nav-list_item nav-list_item__footer">
+                  <a
+                    class="nav-list_item_link nav-list_item_link__footer"
+                    href="/#calc"
+                  >
+                    Калькулятор
+                  </a>
+                </li>
+                <li class="nav-list_item nav-list_item__footer">
+                  <a
+                    class="nav-list_item_link nav-list_item_link__footer"
+                    href="/#poc"
+                  >
+                    Как купить
+                  </a>
+                </li>
+                <li class="nav-list_item nav-list_item__footer">
+                  <a
+                    class="nav-list_item_link nav-list_item_link__footer"
+                    href="/#ysl"
+                  >
+                    Как мы работаем
+                  </a>
+                </li>
+                <li class="nav-list_item nav-list_item__footer">
+                  <a
+                    class="nav-list_item_link nav-list_item_link__footer"
+                    href="/#rew"
+                  >
+                    Отзывы
+                  </a>
+                </li>
+                <li class="nav-list_item nav-list_item__footer">
+                  <span class="modal__agree_open">
+                    Согласие на обработку персональных данных
+                  </span>
+                </li>
+              </ul>
+            </nav>
+            <address class="footer-address">
+              <span class="footer-address_span"
+                ><img src="img/icons/home.png" alt="Офис: " />г. Махачкала,
+                Шамиля ,5</span
+              >
+              <span class="footer-address_span"
+                ><img src="img/icons/home.png" alt="Офис: " />г. Махачкала,
+                ул.Коркмасова 29</span
+              >
+              <span class="footer-address_span"
+                ><img src="img/icons/calendar.png" alt="Время работы:" />Открыто
+                с 10:00 до 19:00</span
+              >
+              <span class="footer-address_span"
+                ><img src="img/icons/calendar.png" alt="Время работы:" />Пятница
+                с 14:00 до 19:00</span
+              >
+              <span class="footer-address_span">
+                <a class="footer-address_span_link" href="tel:+79882919562">
+                  <img
+                    src="img/icons/phone.png"
+                    alt="Телефон:"
+                  />+7(988)291-95-62
                 </a>
-                <nav class="nav header-nav">
-                    <ul class="nav-list">
-                        <li class="nav-list_item">
-                            <a class="nav-list_item_link" href="/">
-                                Главная
-                            </a>
-                        </li>
-                        <li class="nav-list_item">
-                            <a class="nav-list_item_link" href="/#calc">
-                                Калькулятор
-                            </a>
-                        </li>
-                        <li class="nav-list_item">
-                            <a class="nav-list_item_link" href="/#poc">
-                                Как купить
-                            </a>
-                        </li>
-                        <li class="nav-list_item">
-                            <a class="nav-list_item_link" href="/#ysl">
-                                Как мы работаем
-                            </a>
-                        </li>
-                        <li class="nav-list_item">
-                            <a class="nav-list_item_link" href="/#rew">
-                                Отзывы
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header-contact">
-                    <a class="header-contact_number" href="tel:+79882919562">8 (988) 291-95-62</a>
-                    <div class="header-contact_list">
-                        <a class="header-contact_item" href="#"><img src="img/icons/phone.png" alt=">"> Позвонить</a>
-                        <a class="header-contact_item header-contact_item__whatsapp" href="#"><img
-                                src="img/icons/whatsapp.png" alt=">"> Whatsapp</a>
-                        <a class="header-contact_item" href="#"><img src="img/icons/insta.png" alt=">"> Instagram</a>
-                    </div>
-                </div>
-                <button class="header_button">
-                    <span></span>
-                </button>
-            </div>
-        </header>
-        <main class="main">
-            <form action="#" onsubmit="event.preventDefault()" class="auth-form"></form>
-        </main>
-        <footer class="footer">
-            <div class="modal modal__agree">
-                <div class="modal_background"></div>
-                <div class="modal-inner">
-                    <button class="modal-inner_close">&#10006;</button>
-                    <ul class="modal-list">
-                        <li class="modal-list_item">
-                            Я даю ИП Кафланов Кафлан Алимурадович ИНН 051200880525 ОГРНИП 320057100002283, место
-                            нахождения: 367000, г. Махачкала, ул Коркмасова, д.29 согласие на обработку (совершение
-                            любых действий с использованием средств автоматизации или без, в том числе на сбор, запись,
-                            систематизацию, накопление, хранение, уточнение, извлечение, использование, передачу,
-                            обезличивание, блокирование, удаление, уничтожение) моих персональных данных, указанных в
-                            онлайн-заявке на покупку товара в целях принятия ИП Кафланов Кафлан Алимурадович решения о
-                            продаже товара в рассрочку, заключаемого между мной и ИП Кафланов Кафлан Алимурадович
-                            медович, а также в целях продвижения на рынке товаров и/ или услуг ИП Кафланов Кафлан
-                            Алимурадович и/ или третьих лиц
-                        </li>
-                        <li class="modal-list_item">
-                            Я согласен, что ИП Кафланов Кафлан Алимурадович вправе поручить обработку моих персональных
-                            данных третьим лицам.
-                        </li>
-                        <li class="modal-list_item">
-                            Я предоставляю ИП Кафланов Кафлан Алимурадович право проверить все данные, которые я сообщил
-                            ИП Кафланов Кафлан Алимурадович в онлайн-заявке на покупку товара, путем осуществления
-                            сотрудниками ИП Кафланов Кафлан Алимурадович опросов по телефонам, указанным в онлайн-заявке
-                            на покупку товара, а также иными способами, не противоречащими законодательству Российской
-                            Федерации. Мое согласие действует в течение 10 лет, с даты подтверждения онлайн-заявки на
-                            покупку товара
-                        </li>
-                        <li class="modal-list_item">
-                            Я предоставляю ИП Кафланов Кафлан Алимурадович право направлять мне информацию, включая
-                            информацию рекламного характера, об услугах ИИП Кафланов Кафлан Алимурадович и/или третьих
-                            лиц по всем известным ИП Кафланов Кафлан Алимурадович адресам и контактам, в том числе
-                            посредством телефонной коммуникации/ направления смс сообщений, сообщений по социальным
-                            сетям и любым мессенджерам в том числе WhatsApp, Telegram по указанному мной номеру
-                            мобильного телефона, а также посредством направления сообщений по указанному мной адресу
-                            электронной почты.
-                        </li>
-                        <li class="modal-list_item">
-                            Я уведомлен, что могу отозвать свое согласие на обработку персональных данных, представив в
-                            ИП Кафланов Кафлан Алимурадович заявление в письменной форме.
-                        </li>
-                        <li class="modal-list_item">
-                            Я подтверждаю, что указанная в онлайн-заявке на покупку товара информация является
-                            достоверной, а размещенные персональные данные принадлежат мне. Я понимаю, что в случае
-                            предоставления заведомо ложных и (или) недостоверных сведений с целью приобретения товаров в
-                            рассрочку я буду нести ответственность в соответствии с законодательством Российской
-                            Федерации.
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-            <div class="container footer_inner">
-                <div class="footer_logo logo">
-                    <a href="/">
-                        <img src="img/logo-white.svg" alt="Рейхан">
-                    </a>
-                    <div>
-                        <img src="img/icons/instagram__white.png" alt="instagram">
-                        <img src="img/icons/whatsapp__white.png" alt="whatsapp">
-                    </div>
-                </div>
-                <div class="footer_right">
-                    <button class="footer_button">
-                        <span></span>
-                    </button>
-                    <nav class="nav footer_nav">
-                        <ul class="nav-list nav-list__footer">
-                            <li class="nav-list_item nav-list_item__footer">
-                                <a class="nav-list_item_link nav-list_item_link__footer" href="/">
-                                    Главная
-                                </a>
-                            </li>
-                            <li class="nav-list_item nav-list_item__footer">
-                                <a class="nav-list_item_link nav-list_item_link__footer" href="/#calc">
-                                    Калькулятор
-                                </a>
-                            </li>
-                            <li class="nav-list_item nav-list_item__footer">
-                                <a class="nav-list_item_link nav-list_item_link__footer" href="/#poc">
-                                    Как купить
-                                </a>
-                            </li>
-                            <li class="nav-list_item nav-list_item__footer">
-                                <a class="nav-list_item_link nav-list_item_link__footer" href="/#ysl">
-                                    Как мы работаем
-                                </a>
-                            </li>
-                            <li class="nav-list_item nav-list_item__footer">
-                                <a class="nav-list_item_link nav-list_item_link__footer" href="/#rew">
-                                    Отзывы
-                                </a>
-                            </li>
-                            <li class="nav-list_item nav-list_item__footer">
-                                <span class="modal__agree_open">
-                                    Согласие на обработку персональных данных
-                                </span>
-                            </li>
-                        </ul>
-                    </nav>
-                    <address class="footer-address">
-                        <span class="footer-address_span"><img src="img/icons/home.png" alt="Офис: ">г. Махачкала,
-                            Шамиля ,5</span>
-                        <span class="footer-address_span"><img src="img/icons/home.png" alt="Офис: ">г. Махачкала,
-                            ул.Коркмасова 29</span>
-                        <span class="footer-address_span"><img src="img/icons/calendar.png" alt="Время работы:">Открыто
-                            с 10:00 до 19:00</span>
-                        <span class="footer-address_span"><img src="img/icons/calendar.png" alt="Время работы:">Пятница
-                            с 14:00 до 19:00</span>
-                        <span class="footer-address_span">
-                            <a class="footer-address_span_link" href="tel:+79882919562">
-                                <img src="img/icons/phone.png" alt="Телефон:">+7(988)291-95-62
-                            </a>
-                        </span>
-                        <span class="footer-address_span"><a href="https://t.me/axvai">Разработка сайта -
-                                @axvai</a></span>
-                    </address>
-                </div>
-            </div>
-        </footer>
+              </span>
+              <span class="footer-address_span"
+                ><a href="https://t.me/axvai"
+                  >Разработка сайта - @axvai</a
+                ></span
+              >
+            </address>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script>
-        // скрипт для кнопки в шапке
-        const mobileHeaderButton = document.querySelector('.header_button');
-        const headerNav = document.querySelector('.header-nav');
+      // скрипт для кнопки в шапке
+      const mobileHeaderButton = document.querySelector(".header_button");
+      const headerNav = document.querySelector(".header-nav");
 
-        mobileHeaderButton.addEventListener('click', (e) => {
-            e.target.classList.toggle('header_button__active');
-            headerNav.classList.toggle('header-nav__active')
-        })
+      mobileHeaderButton.addEventListener("click", (e) => {
+        e.target.classList.toggle("header_button__active");
+        headerNav.classList.toggle("header-nav__active");
+      });
 
-        // скрипт для кнопки в футере
-        const mobileFooterButton = document.querySelector('.footer_button');
-        const footerNav = document.querySelector('.footer_nav')
-        mobileFooterButton.addEventListener('click', e => {
-            e.target.classList.toggle('footer_button__active');
-            footerNav.classList.toggle('footer_nav__active')
-        })
+      // скрипт для кнопки в футере
+      const mobileFooterButton = document.querySelector(".footer_button");
+      const footerNav = document.querySelector(".footer_nav");
+      mobileFooterButton.addEventListener("click", (e) => {
+        e.target.classList.toggle("footer_button__active");
+        footerNav.classList.toggle("footer_nav__active");
+      });
 
-        // открытие и закрытие попапа agree
-        const modal_agree = document.querySelector('.modal__agree');
-        const modal_agree_background = document.querySelector('.modal__agree .modal_background');
-        const modal_agree_close = document.querySelector('.modal__agree .modal-inner_close');
-        const modalOpen = document.querySelector('.modal__agree_open');
+      // открытие и закрытие попапа agree
+      const modal_agree = document.querySelector(".modal__agree");
+      const modal_agree_background = document.querySelector(
+        ".modal__agree .modal_background"
+      );
+      const modal_agree_close = document.querySelector(
+        ".modal__agree .modal-inner_close"
+      );
+      const modalOpen = document.querySelector(".modal__agree_open");
 
-        function toggleModalAgree () {
-            modal_agree.classList.toggle('modal__active');
-        }
+      function toggleModalAgree() {
+        modal_agree.classList.toggle("modal__active");
+      }
 
-        modal_agree_background.addEventListener('click', toggleModalAgree);
-        modal_agree_close.addEventListener('click', toggleModalAgree);
-        modalOpen.addEventListener('click', toggleModalAgree);
+      modal_agree_background.addEventListener("click", toggleModalAgree);
+      modal_agree_close.addEventListener("click", toggleModalAgree);
+      modalOpen.addEventListener("click", toggleModalAgree);
 
+      //   //   инпут в форме авторизации
+      //   const inputAuth = document.querySelector("#auth-form_input");
+      //   inputAuth.addEventListener("input", function (event) {
+      //     console.log(event);
+      //     // if(event.target.data)
+      //     if (event.data.match(/\d/)) {
+      //       event.target.value = event.target.value.slice(
+      //         0,
+      //         event.target.value.length - 1
+      //       );
+      //       console.log(event.target.value);
+      //       return;
+      //     }
+      //     console.log(event.data);
+      //   });
     </script>
-</body>
-
+  </body>
 </html>

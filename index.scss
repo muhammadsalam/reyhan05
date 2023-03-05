@@ -210,7 +210,85 @@ body {
 
 .main {
     flex-grow: 1;
+    position: relative;
+    padding: 60px 0;
+
+}
+
+.main:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    max-height: 392px;
     background-image: linear-gradient(180deg, #156221 72%, #FFFFFF 100%);
+    position: absolute;
+    z-index: -1;
+}
+
+.main__center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-form{
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 54px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.auth-form_title{
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.auth-form_block{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.auth-form_plus{
+    width: 34px;
+    height: 34px;
+    background-color: #f2f2f2;
+    border-radius: 4px 0 0 4px;
+    font-size: 22px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form_input{
+    background-color: #f2f2f2;
+    border: 0;
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: content-box;
+    padding: 14px;
+    border-radius: 4px;
+    box-shadow: -10px 0 10px -5px rgba(190, 190, 190, 0.6);
+    font-size: 16px;
+}
+
+.auth-form_button{
+    border: 0;
+    background-color: #519e5c;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color .123s ease-in;
+    &:hover{
+        background-color: #4a8c54;
+    }
 }
 
 .footer {
@@ -424,6 +502,8 @@ body {
     .header-nav {
         overflow: hidden;
         position: absolute;
+        z-index: 11;
+        background-color: #fff;
         width: 100%;
         left: 0;
         top: 100%;
@@ -487,7 +567,7 @@ body {
     }
 
     .nav-list_item__footer:not(:last-child) {
-        margin-top: -28px;
+        margin-top: -29px;
         transition: margin-top .123s ease-in;
     }
 
@@ -546,5 +626,9 @@ body {
         font-size: 0;
         width: 14px;
         vertical-align: middle;
+    }
+
+    .auth-form{
+        padding: 30px
     }
 }
