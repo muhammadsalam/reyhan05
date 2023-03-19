@@ -64,8 +64,131 @@
           <section class="profile">
             <h1 class="title">Личный кабинет</h1>
             <div class="profile-top">
-              <h2 class="profile-top_title">Мухаммадов М. М.</h2>
+              <h2 class="profile-top_title">
+                Мухаммадов М. М. <span>+71231231212</span>
+              </h2>
               <button class="profile-top_button">Новый договор</button>
+              <form class="calculator" style="display: none">
+                <div class="calculator-left">
+                  <img
+                    src="img/icons/popup-close.png"
+                    alt="x"
+                    class="calculator-left_close"
+                  />
+                  <div class="calculator-left_item" id="price-item">
+                    <span class="calculator-left_name">Цена в рассрочку</span>
+                    <span class="calculator-left_value" id="price-result"
+                      >0 <sub>руб</sub></span
+                    >
+                  </div>
+                  <div class="calculator-left_item" id="initialFee-item">
+                    <span class="calculator-left_name">Ежемесячный платеж</span>
+                    <span class="calculator-left_value" id="monthPayment-result"
+                      >0 <sub>руб</sub></span
+                    >
+                  </div>
+                  <div class="calculator-left_item" id="term-item">
+                    <span class="calculator-left_name">Наша наценка</span>
+                    <span class="calculator-left_value" id="markup-result"
+                      >0 <sub>руб</sub></span
+                    >
+                  </div>
+                  <button class="calculator-left_button">подать заявку</button>
+                </div>
+                <div class="calculator-right">
+                  <h2 class="calculator-right_title">Калькулятор рассрочки</h2>
+                  <div class="calculator-inputs">
+                    <div class="inputs-item">
+                      <label class="inputs-item_label" for="input-price"
+                        >Стоимость товара</label
+                      >
+                      <div class="inputs-item_block">
+                        <input
+                          class="inputs-item_input"
+                          type="number"
+                          id="input-price"
+                          value="0"
+                          min="0"
+                          max="450000"
+                        />
+                        <span class="inputs-item_unit">руб.</span>
+                      </div>
+                      <input
+                        class="inputs-item_range"
+                        step="1"
+                        id="input-price-range"
+                        type="range"
+                        value="0"
+                        min="0"
+                        max="450000"
+                      />
+                    </div>
+                    <div class="inputs-item">
+                      <label class="inputs-item_label" for="input-deposit"
+                        >Первоначальный взнос</label
+                      >
+                      <div class="inputs-item_block">
+                        <input
+                          type="number"
+                          class="inputs-item_input"
+                          id="input-deposit"
+                          value="0"
+                          min="0"
+                          max="1000000"
+                        />
+                        <span class="inputs-item_unit">руб.</span>
+                      </div>
+                      <input
+                        class="inputs-item_range"
+                        step="1"
+                        type="range"
+                        id="initialFee-range"
+                        value="0"
+                        min="0"
+                      />
+                    </div>
+                    <div class="inputs-item">
+                      <label class="inputs-item_label" for="input-term"
+                        >Срок рассрочки</label
+                      >
+                      <div class="inputs-item_block">
+                        <input
+                          type="number"
+                          class="inputs-item_input"
+                          id="input-term"
+                          value="3"
+                          min="3"
+                          max="36"
+                          pattern="\d*"
+                        />
+                        <span class="inputs-item_unit">мес.</span>
+                      </div>
+                      <input
+                        class="inputs-item_range"
+                        step="1"
+                        type="range"
+                        id="input-term-range"
+                        value="3"
+                        min="3"
+                        max="36"
+                      />
+                    </div>
+                    <div class="calculator-right_checkbox">
+                      <input
+                        class="calculator-right_checkbox_input"
+                        type="checkbox"
+                        id="checkbox-guarantor"
+                        checked
+                      />
+                      <label
+                        for="checkbox-guarantor"
+                        class="calculator-right_checkbox_label"
+                        >Рассрочка с поручителем</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
             <div class="table table__main">
               <div class="table-row table-row__main">
@@ -80,15 +203,17 @@
                 <div class="table-row_item table-row_item__main"></div>
                 <div class="table-row_item table-row_item__main"></div>
               </div>
-              <div class="table-row table-row__main">
+              <form class="table-row table-row__main">
                 <div class="table-row_item table-row_item__main">
-                  <button class="table-row_item_active">
+                  <button type="button" class="table-row_item_active">
                     №33 от 22.07.2023
                   </button>
                   <div class="modal modal__contract table-row_item_modal">
                     <div class="modal_background"></div>
                     <div class="modal-inner">
-                      <button class="modal-inner_close">&#10006;</button>
+                      <button type="button" class="modal-inner_close">
+                        &#10006;
+                      </button>
                       <div class="modal-top">
                         <h3 class="title-h3">айфон 12 про 256гб</h3>
                         57188
@@ -223,16 +348,18 @@
                 <div class="table-row_item table-row_item__main">
                   <button class="table-row_item_button">Оплатить</button>
                 </div>
-              </div>
-              <div class="table-row table-row__main table-row__warning">
+              </form>
+              <form class="table-row table-row__main table-row__warning">
                 <div class="table-row_item table-row_item__main">
-                  <button class="table-row_item_active">
+                  <button type="button" class="table-row_item_active">
                     №35 от 18.01.2023
                   </button>
                   <div class="modal modal__contract table-row_item_modal">
                     <div class="modal_background"></div>
                     <div class="modal-inner">
-                      <button class="modal-inner_close">&#10006;</button>
+                      <button type="button" class="modal-inner_close">
+                        &#10006;
+                      </button>
                       <div class="modal-top">
                         <h3 class="title-h3">айфон 12 про 256гб</h3>
                         57188
@@ -369,7 +496,7 @@
                 <div class="table-row_item table-row_item__main">
                   <button class="table-row_item_button">Оплатить</button>
                 </div>
-              </div>
+              </form>
             </div>
           </section>
         </div>
@@ -545,6 +672,390 @@
       </footer>
     </div>
 
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      "use strict";
+
+      (function ($) {
+        $(document).ready(function () {
+          var calcContainer = document.querySelector(".calculator"),
+            priceWrapper = document.querySelector("#price-item"),
+            initialFeeWrapper = document.querySelector("#initialFee-item"),
+            termWrapper = document.querySelector("#term-item"),
+            priceText = calcContainer.querySelector("#input-price"),
+            priceRange = document.querySelector("#input-price-range"),
+            initialFeeText = calcContainer.querySelector("#input-deposit"),
+            initialFeeRange = calcContainer.querySelector("#initialFee-range"),
+            termText = calcContainer.querySelector("#input-term"),
+            termRange = calcContainer.querySelector("#input-term-range"),
+            guranteeCheckbox = calcContainer.querySelector(
+              "#checkbox-guarantor"
+            ),
+            closeBtn = document.querySelector(".calculator-left_close"),
+            calcPopupContainer = document.querySelector(".calculator-left");
+
+          function setDefaultPaddingValue(e) {
+            960 < e
+              ? ($(".calc").css("padding-right", "30px"),
+                $(".calc-popup").css("left", "100%"))
+              : 720 < e &&
+                ($(".calc").css("padding-right", "22px"),
+                $(".calc-popup").css("left", "100%"));
+          }
+          closeBtn.addEventListener("click", function () {
+            $(calcPopupContainer).fadeOut(),
+              $(".section-calc-slider").css("padding-bottom", "0px"),
+              setDefaultPaddingValue(window.innerWidth);
+          }),
+            $(".swiper-button-next-header").on("click", function () {
+              $(calcPopupContainer).fadeOut(),
+                setDefaultPaddingValue(window.innerWidth);
+            });
+          var priceSpan = document.querySelector("#price-result"),
+            monthPaymentSpan = document.querySelector("#monthPayment-result"),
+            markupSpan = document.querySelector("#markup-result"),
+            priceMinusInitialFee = priceText.value - initialFeeText.value;
+
+          function getDifference(e, t) {
+            return e.value - t.value;
+          }
+
+          function termInputHandler(e) {
+            $(calcPopupContainer).fadeIn(),
+              addExtraSpacesForPopup(window.innerWidth),
+              (termText.value = termRange.value = e.value),
+              validateTerm(termText),
+              calcAndShowResultsToUser(
+                totalCalc(
+                  guranteeCheckbox.checked,
+                  priceMinusInitialFee,
+                  termText.value,
+                  priceText.value
+                )
+              );
+          }
+
+          function initialFeeInputHandler(e) {
+            "" === e.value && (e.value = 0),
+              $(calcPopupContainer).fadeIn(),
+              addExtraSpacesForPopup(window.innerWidth),
+              (initialFeeText.value = initialFeeRange.value = e.value),
+              comparePriceAndInitialFee(priceText, initialFeeText),
+              checkPriceProduct(
+                (priceMinusInitialFee = getDifference(
+                  priceText,
+                  initialFeeText
+                )),
+                guranteeCheckbox.checked
+              ),
+              calcAndShowResultsToUser(
+                totalCalc(
+                  guranteeCheckbox.checked,
+                  priceMinusInitialFee,
+                  termText.value,
+                  priceText.value
+                )
+              );
+          }
+
+          function priceInputHandler(e) {
+            "" === e.value && (e.value = 0),
+              $(calcPopupContainer).fadeIn(),
+              addExtraSpacesForPopup(window.innerWidth),
+              (priceRange.value = priceText.value = e.value),
+              validatePrice(priceText),
+              comparePriceAndInitialFee(priceText, initialFeeText),
+              // console.log(priceText, initialFeeText);
+              checkPriceProduct(
+                (priceMinusInitialFee = getDifference(
+                  priceText,
+                  initialFeeText
+                )),
+                guranteeCheckbox.checked
+              ),
+              calcAndShowResultsToUser(
+                totalCalc(
+                  guranteeCheckbox.checked,
+                  priceMinusInitialFee,
+                  termText.value,
+                  priceText.value
+                )
+              );
+          }
+
+          function addExtraSpacesForPopup(e) {
+            e <= 480
+              ? $(".section-calc-slider").css("padding-bottom", "70px")
+              : e <= 640
+              ? $(".section-calc-slider").css("padding-bottom", "0px")
+              : e <= 720
+              ? $(".section-calc-slider").css("padding-bottom", "20px")
+              : 720 < e &&
+                ($(".calc").css("padding-right", "50px"),
+                $(".calc-popup").css("left", "90%"));
+          }
+
+          function calcAndShowResultsToUser(e) {
+            (priceSpan.innerHTML = Math.ceil(e.finalCost) + "<sub> руб </sub>"),
+              (monthPaymentSpan.innerHTML =
+                e.monthPayment + "<sub> руб </sub>"),
+              (markupSpan.innerHTML = Math.ceil(e.markup) + "<sub> руб </sub>");
+          }
+
+          function validateTerm(e) {
+            var t = e.getAttribute("min"),
+              n = e.getAttribute("max");
+            Number(e.value) < t
+              ? ((e.value = t), (e.nextElementSibling.value = t))
+              : Number(e.value) > n &&
+                ((e.value = n), (e.nextElementSibling.value = n));
+          }
+
+          function checkPriceProduct(e, t) {
+            // if (e < 5e4) return guranteeCheckbox.disabled = !1, resetInitialFee(), void setTermAttribute(3, t ? 18 : 36);
+            // if (e < 5e4) return guranteeCheckbox.disabled = !1, resetInitialFee(), void setTermAttribute(3, 36);
+            if (e < 1e5)
+              return (
+                (guranteeCheckbox.disabled = !1),
+                1e5 < Number(priceText.value) &&
+                  updateInitialFeeLimit(e, priceText.value),
+                void (t ? setTermAttribute(3, 36) : setTermAttribute(3, 36))
+              );
+            // if (e <= 1e6) {
+            if (e <= 450000) {
+              var n = setInitialFee(priceText.value);
+              (priceMinusInitialFee = priceText.value - n),
+                setTermAttribute(3, 36),
+                setGurantee();
+            }
+          }
+
+          function updateInitialFeeLimit(e, t) {
+            setInitialFeeMinimum(1 + (t - 1e5));
+          }
+
+          function setGurantee() {
+            (guranteeCheckbox.checked = !0), (guranteeCheckbox.disabled = !0);
+          }
+
+          function comparePriceAndInitialFee(e, t) {
+            if (
+              (t.setAttribute("max", e.value),
+              initialFeeRange.setAttribute("max", e.value),
+              Number(t.value) > Number(e.value))
+            ) {
+              return (initialFeeRange.value = t.value = 0);
+            }
+          }
+
+          function resetInitialFee() {
+            initialFeeRange.setAttribute("min", 0),
+              initialFeeText.setAttribute("min", 0);
+          }
+
+          function setInitialFee(e) {
+            var t = Math.round(0.2 * e), // Установим минимальный первоначальный взнос
+              n = priceText.value - 1e5;
+            return (
+              setInitialFeeMinimum(n < t ? 1 + n : t),
+              (initialFeeText.value < t || initialFeeRange.value < t) &&
+                (initialFeeText.value = initialFeeRange.value = t),
+              t > Number(initialFeeText.value) ? t : initialFeeText.value
+            );
+          }
+
+          function setInitialFeeMinimum(e) {
+            initialFeeRange.setAttribute("min", e),
+              initialFeeText.setAttribute("min", e);
+          }
+
+          function setTermAttribute(e, t) {
+            termText.setAttribute("min", e),
+              termText.setAttribute("max", t),
+              termRange.setAttribute("min", e),
+              termRange.setAttribute("max", t),
+              termText.value < e
+                ? ((termText.value = e), (termRange.value = e))
+                : termText.value > t &&
+                  ((termText.value = t), (termRange.value = t));
+          }
+
+          function validatePrice(e) {
+            var t = priceText.getAttribute("max");
+            Number(e.value) > Number(t) &&
+              ((e.value = t),
+              e === priceText
+                ? (e.nextElementSibling.value = t)
+                : e === priceRange && (e.previousElementSibling.value = t));
+          }
+
+          function addInputListener(t, e, n) {
+            Array.prototype.forEach.call(
+              e.getElementsByTagName("input"),
+              function (e) {
+                e.addEventListener(t, n);
+              }
+            );
+          }
+
+          function totalCalc(e, t, n, i) {
+            var a, r, u, c, l;
+            return (
+              (a = e
+                ? getGuranteePercentage(
+                    getBreakpoint(
+                      t,
+                      [
+                        0, 40001, 41666, 50000, 93333, 1e5, 139800, 150000,
+                        450000,
+                      ]
+                    ),
+                    t
+                  )
+                : getNotGuranteePercentage(
+                    getBreakpoint(t, [0, 40001, 41666, 50000, 93333, 1e5]),
+                    t
+                  )),
+              (r =
+                100 < Number(a) // Если процент более 100, значит, это не процент, а фиксированная ставка.
+                  ? a * n
+                  : ((l = a), Math.round(t * (l / 100) * n))) < 1e3 &&
+                (r = 1e3),
+              (u = Number(i) + r), // Полная стоимость
+              (c = Math.floor((r + t) / n)), // Ежемесячный платеж
+              0 === t
+                ? {
+                    markup: 0,
+                    finalCost: i,
+                    monthPayment: 0,
+                  }
+                : {
+                    markup: r,
+                    finalCost: u,
+                    monthPayment: c,
+                  }
+            );
+          }
+
+          function getGuranteePercentage(e, t) {
+            var n;
+            // switch (n = t, e) {
+            switch (e) {
+              case 40001: // Верхний предел
+                return 3;
+              case 41666:
+                return 3;
+              case 50000:
+                // return calcFloatProcent(n, 4e4, 5e4, 2.5, 3);
+                return 1250;
+              case 93333:
+                return 2.5;
+              case 1e5:
+                return 28e3 / 12;
+              case 139800:
+                return 2.334;
+              case 150000:
+                return 3250;
+              case 450000:
+                return 2.167;
+              default:
+                return;
+            }
+          }
+
+          function getNotGuranteePercentage(e, t) {
+            switch (e) {
+              case 40001: // Верхний предел
+                return 3.75;
+              case 41666:
+                return 1500;
+              case 50000:
+                return 1500;
+              case 93333:
+                return 3;
+              case 1e5:
+                return 3;
+              default:
+                return;
+            }
+          }
+
+          function calcFloatProcent(e, t, n, i, a) {
+            return (a - ((e - t) / (n - t)) * (a - i)).toFixed(3);
+          }
+
+          function getBreakpoint(e, t) {
+            for (var n = t[0], i = 0; i < t.length; i++)
+              if (e <= t[i]) {
+                n = t[i];
+                break;
+              }
+            return n;
+          }
+          initialFeeText.setAttribute("max", priceText.value),
+            initialFeeRange.setAttribute("max", priceText.value),
+            priceRange.addEventListener("input", function (e) {
+              priceInputHandler(e.target);
+            }),
+            priceText.addEventListener("blur", function (e) {
+              priceInputHandler(e.target);
+            }),
+            priceText.addEventListener("keyup", function (e) {
+              13 === e.keyCode && priceInputHandler(e.target);
+            }),
+            initialFeeRange.addEventListener("input", function (e) {
+              initialFeeInputHandler(e.target);
+            }),
+            initialFeeText.addEventListener("blur", function (e) {
+              initialFeeInputHandler(e.target);
+            }),
+            initialFeeText.addEventListener("keyup", function (e) {
+              13 === e.keyCode && initialFeeInputHandler(e.target);
+            }),
+            termRange.addEventListener("input", function (e) {
+              termInputHandler(e.target);
+            }),
+            termText.addEventListener("blur", function (e) {
+              termInputHandler(e.target);
+            }),
+            termText.addEventListener("keyup", function (e) {
+              13 === e.keyCode && termInputHandler(e.target);
+            }),
+            guranteeCheckbox.addEventListener("change", function () {
+              $(calcPopupContainer).fadeIn(),
+                addExtraSpacesForPopup(window.innerWidth),
+                checkPriceProduct(
+                  (priceMinusInitialFee =
+                    priceText.value - initialFeeText.value),
+                  guranteeCheckbox.checked
+                ),
+                calcAndShowResultsToUser(
+                  totalCalc(
+                    guranteeCheckbox.checked,
+                    priceMinusInitialFee,
+                    termText.value,
+                    priceText.value
+                  )
+                );
+            }),
+            addInputListener("input", calcContainer, function (e) {
+              var t = e.target;
+              /^\d+$/.test(t.value) ||
+                ((t.value = t.value.slice(0, -1)),
+                (t.nextElementSibling.value = t.value)),
+                (t !== priceText && t !== initialFeeText) ||
+                  (t.value.startsWith("0") &&
+                    1 < t.value.length &&
+                    ((t.value = t.value.slice(1, t.value.length)),
+                    (t.nextElementSibling.value = t.value)));
+            });
+        });
+      })(jQuery);
+    </script>
     <script>
       // скрипт для кнопки в шапке
       const mobileHeaderButton = document.querySelector(".header_button");
@@ -581,22 +1092,6 @@
       modal_agree_close.addEventListener("click", toggleModalAgree);
       modalOpen.addEventListener("click", toggleModalAgree);
 
-      //   //   инпут в форме авторизации
-      //   const inputAuth = document.querySelector("#auth-form_input");
-      //   inputAuth.addEventListener("input", function (event) {
-      //     console.log(event);
-      //     // if(event.target.data)
-      //     if (event.data.match(/\d/)) {
-      //       event.target.value = event.target.value.slice(
-      //         0,
-      //         event.target.value.length - 1
-      //       );
-      //       console.log(event.target.value);
-      //       return;
-      //     }
-      //     console.log(event.data);
-      //   });
-
       const buttonForModal = document.querySelectorAll(
         ".table-row_item_active"
       );
@@ -621,6 +1116,30 @@
           modalForButtons[i].classList.toggle("modal__active");
         });
       }
+
+      // Проверка попапа калькулятор
+      let calculator = document.querySelector(".calculator");
+
+      document
+        .querySelector(".profile-top_button")
+        .addEventListener("click", function (event) {
+          if (!calculator.classList.contains("calculator__active")) {
+            $(calculator).fadeIn();
+            calculator.classList.add("calculator__active");
+          } else {
+            $(calculator).fadeOut();
+            calculator.classList.remove("calculator__active");
+          }
+          event.stopPropagation();
+        });
+
+      document.addEventListener("click", function (event) {
+        if (calculator.contains(event.target)) return;
+        if (calculator.classList.contains("calculator__active")) {
+          $(calculator).fadeOut();
+          calculator.classList.remove("calculator__active");
+        }
+      });
     </script>
   </body>
 </html>
