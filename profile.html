@@ -62,6 +62,17 @@
       <main class="main">
         <div class="container main_inner main_inner__profile">
           <section class="profile">
+            <div class="modal modal__calculator">
+              <div class="modal_background"></div>
+              <div class="modal-inner">
+                <button type="button" class="modal-inner_close">
+                  &#10006;
+                </button>
+                <h3 class="modal__calculator-inner_title">
+                  Ваша заявка принята, мы скоро свяжемся с вами!
+                </h3>
+              </div>
+            </div>
             <h1 class="title">Личный кабинет</h1>
             <div class="profile-top">
               <h2 class="profile-top_title">
@@ -1139,6 +1150,11 @@
           $(calculator).fadeOut();
           calculator.classList.remove("calculator__active");
         }
+      });
+
+      // modal calculator
+      $(".modal-inner_close, .modal_background").click(function () {
+        $(this).closest(".modal__active").removeClass("modal__active");
       });
     </script>
   </body>

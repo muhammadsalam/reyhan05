@@ -262,6 +262,7 @@ body {
   align-items: top;
   margin-top: 26px;
   position: relative;
+  gap: 20px;
 }
 
 .profile-top_title {
@@ -284,6 +285,7 @@ body {
   cursor: pointer;
   font-weight: 18;
   font-weight: 500;
+  outline: none;
   transition: background-color 0.123s ease-in, color 0.123s ease-in;
 
   &:hover {
@@ -761,7 +763,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 0;
+  & > div {
+    margin-left: 16px;
+  }
 }
 
 .footer-logo_link {
@@ -1068,8 +1073,16 @@ body {
     align-items: center;
   }
 
+  .table-row {
+    border-radius: 8px;
+  }
+
   .table-row__main {
     grid-template-columns: 1fr 1fr;
+
+    & + & {
+      margin-top: 10px;
+    }
 
     &:first-child {
       display: none;
@@ -1080,6 +1093,29 @@ body {
       align-items: center;
       justify-content: space-between;
       padding: 0 5px;
+      text-align: right;
+      padding: 10px;
+
+      &:before {
+        text-align: left;
+      }
+
+      .table-row_item_active {
+        text-align: right;
+      }
+
+      &:nth-child(5) {
+        border: 1px solid crimson;
+        border-right: none;
+        border-radius: 8px 0 0 8px;
+        padding: 5px;
+      }
+      &:nth-child(6) {
+        border: 1px solid crimson;
+        border-left: none;
+        border-radius: 0 8px 8px 0;
+        padding: 5px;
+      }
 
       &:not(:nth-child(5)):not(:nth-child(6)) {
         grid-column-end: span 2;
@@ -1151,15 +1187,29 @@ body {
 
   // калькулятор_768
   .calculator {
+    position: fixed;
+    top: 0;
+    overflow-y: scroll;
+    height: 100%;
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
   }
 
   .calculator-left {
     right: 0;
-    top: calc(100% - 10px);
+    margin-top: 20px;
+    order: 1;
+    position: static;
     background-color: #4f429b;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .calculator-right {
+    padding: 0 30px 0 50px;
   }
 
   .calculator-left_close {
@@ -1222,5 +1272,9 @@ body {
 
   .auth-form_title {
     font-size: 18px;
+  }
+
+  .footer_button {
+    display: none;
   }
 }
