@@ -80,6 +80,13 @@
               </h2>
               <button class="profile-top_button">Новый договор</button>
               <form class="calculator" style="display: none">
+                <button class="calculator-button" type="button">
+                  <img
+                    src="img/icons/popup-close.png"
+                    alt="x"
+                    class="calculator-button_img"
+                  />
+                </button>
                 <div class="calculator-left">
                   <img
                     src="img/icons/popup-close.png"
@@ -707,6 +714,7 @@
               "#checkbox-guarantor"
             ),
             closeBtn = document.querySelector(".calculator-left_close"),
+            allCloseBtn = document.querySelector(".calculator-button"),
             calcPopupContainer = document.querySelector(".calculator-left");
 
           function setDefaultPaddingValue(e) {
@@ -726,6 +734,12 @@
               $(calcPopupContainer).fadeOut(),
                 setDefaultPaddingValue(window.innerWidth);
             });
+          allCloseBtn.addEventListener("click", function () {
+            $(calcContainer).fadeOut();
+            // убирать класс calculator__active у элемента и обнулять overflow для элемента body
+            $(".calculator__active").removeClass("calculator__active");
+            document.body.style.overflow = "";
+          });
           var priceSpan = document.querySelector("#price-result"),
             monthPaymentSpan = document.querySelector("#monthPayment-result"),
             markupSpan = document.querySelector("#markup-result"),
@@ -1137,9 +1151,14 @@
           if (!calculator.classList.contains("calculator__active")) {
             $(calculator).fadeIn();
             calculator.classList.add("calculator__active");
+            // проверять является ли ширина экрана < 768 и выдавать overflow hidden для body, чтобы отключить скролл
+            if (window.innerWidth < 768) {
+              document.body.style.overflow = "hidden";
+            }
           } else {
             $(calculator).fadeOut();
             calculator.classList.remove("calculator__active");
+            document.body.style.overflow = "";
           }
           event.stopPropagation();
         });
@@ -1149,6 +1168,7 @@
         if (calculator.classList.contains("calculator__active")) {
           $(calculator).fadeOut();
           calculator.classList.remove("calculator__active");
+          document.body.style.overflow = "";
         }
       });
 
