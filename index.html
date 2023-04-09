@@ -66,9 +66,8 @@
             <input
               id="auth-form_input"
               class="auth-form_input"
-              placeholder="+79xxxxxxxxx"
+              placeholder="+7 (XXX) XXX-XX-XX"
               type="text"
-              pattern="^[0-9]*$"
             />
           </div>
           <button class="auth-form_button">Получить sms с кодом</button>
@@ -245,6 +244,7 @@
       </footer>
     </div>
 
+    <script src="https://unpkg.com/imask"></script>
     <script>
       // скрипт для кнопки в шапке
       const mobileHeaderButton = document.querySelector(".header_button");
@@ -284,24 +284,18 @@
       // инпут в форме авторизации. при нажатии 8 или 9 автоматом дописывается 7
       const authInput = document.querySelector("#auth-form_input");
 
-      authInput.addEventListener("keydown", (event) => {
-        const inputValue = authInput.value.trim();
-        const key = event.key;
-
-        if (inputValue === "" && (key === "7" || key === "8")) {
-          authInput.value = "+7";
-          event.preventDefault(); // предотвращаем ввод символа "7" или "8" в поле
-        } else if (inputValue === "" && key === "9") {
-          authInput.value = "+79";
-          event.preventDefault(); // предотвращаем ввод символа "9" в поле
-        } else if (
-          inputValue.startsWith("+7") &&
-          (key === "8" || key === "9")
-        ) {
-          // do nothing, +7 or +79 is already at the beginning
-        } else {
-          // allow other input
-        }
+      let inputMask = IMask(authInput, {
+        mask: "+7 (000) 000-00-00",
+        lazy: true,
+        prepare: function (str) {
+          if (authInput.value == "8") {
+            return "";
+          }
+          if (authInput.value == "7") {
+            return "";
+          }
+          return str;
+        },
       });
     </script>
   </body>
