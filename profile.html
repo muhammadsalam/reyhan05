@@ -111,6 +111,18 @@
                       >0 <sub>руб</sub></span
                     >
                   </div>
+                  <input
+                    type="text"
+                    class="calculator-left_input"
+                    placeholder="Наименование товара"
+                    required
+                  />
+                  <input
+                    type="text"
+                    class="calculator-left_input"
+                    placeholder="Где вы хотите приобрести товар?"
+                    required
+                  />
                   <button class="calculator-left_button">подать заявку</button>
                 </div>
                 <div class="calculator-right">
@@ -1068,6 +1080,9 @@
                 );
             }),
             addInputListener("input", calcContainer, function (e) {
+              if (e.target.classList.contains("calculator-left_input")) {
+                return;
+              }
               var t = e.target;
               /^\d+$/.test(t.value) ||
                 ((t.value = t.value.slice(0, -1)),

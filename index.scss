@@ -590,6 +590,21 @@ body {
   }
 }
 
+.calculator-left_input {
+  min-width: 280px;
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  outline: none;
+  margin-bottom: 10px;
+
+  &::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
 .calculator-left_button {
   cursor: pointer;
   font-size: 14px;
@@ -1224,7 +1239,7 @@ body {
     order: 1;
     position: static;
     background-color: #4f429b;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
   }
